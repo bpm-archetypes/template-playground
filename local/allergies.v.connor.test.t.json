@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.3",
+      "sem_ver" : "2.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "df2500f0513ddcd9fbe36ca5b6abb216",
+      "MD5-CAM-1.0.1" : "4b416e92517ffaee68508a22d5c871e6",
       "PARENT:MD5-CAM-1.0.1" : "c408e9813ee6329a63805c577b4b5813"
     },
     "details" : {
@@ -670,7 +670,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0120.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -683,12 +682,26 @@
                     "rmAttributeName" : "defining_code",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "1..1",
                       "terminologyId" : {
-                        "value" : "local"
+                        "value" : "local_terms"
                       },
-                      "constraint" : [ "at0121", "at0122", "at0123" ]
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "414285001",
+                        "value" : "Food allergy"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "416098002",
+                        "value" : "Drug allergy"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "609328004",
+                        "value" : "Other allergy"
+                      } ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -1168,6 +1181,26 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.28",
           "members" : [ "ac0.25" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "at0121", "at0122", "at0123" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "ac0.29" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "ac0.29" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ "ac0.29" ]
         }
       }
     },
