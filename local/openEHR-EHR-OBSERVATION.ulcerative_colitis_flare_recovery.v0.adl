@@ -1,0 +1,270 @@
+archetype (adl_version=1.4; uid=4b16b584-a888-46bc-a4b5-82b13744d5d4)
+	openEHR-EHR-OBSERVATION.ulcerative_colitis_flare_recovery.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-09-09">
+		["name"] = <"Dr Andrew Brunton">
+		["organisation"] = <"Big Picture Medical">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"87a8ca4d00006ab052a8bd093f696364">
+		["build_uid"] = <"6a421ded-334e-3e78-8b0a-bca7eca38eda">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Ulcerative Colitis Flare Recovery
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- In the last 24hrs, how many times have you opened your bowels?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- 0-2
+													at0006,    -- 4-6
+													at0007,    -- 7-9
+													at0008]    -- More than 9
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- How many times did you open your bowels last night?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0010,    -- Nil
+													at0011,    -- 1-3
+													at0012,    -- 4-6
+													at0013]    -- 7 or more
+												}
+											}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- In the last 24hrs, when opening your bowels, how urgent is it?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0015,    -- Nil
+													at0016,    -- Hurry
+													at0017]    -- Immediately
+												}
+											}
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- In the last 24hrs, have you had any blood in your stool
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0019,    -- No blood in stool
+													at0020,    -- Tiny traces of blood in stool
+													at0021,    -- Sometimes obvious blood in stool
+													at0022]    -- Obvious blood in stool most of the time
+												}
+											}
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Over the last 24hrs, how do you feel in general?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0024,    -- I feel very well
+													at0025,    -- I feel slightly below par
+													at0026,    -- I feel poor
+													at0027,    -- I feel very poor
+													at0028]    -- I feel terrible
+												}
+											}
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Over the last 24hrs, have you experienced any of the following?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0030,    -- Arthritis
+													at0031,    -- Uveitis
+													at0032,    -- Erythema nodosum
+													at0033]    -- Pyoderma Gangrenosum
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Ulcerative Colitis Flare Recovery">
+					description = <"Ulcerative Colitis Flare Recovery">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"In the last 24hrs, how many times have you opened your bowels?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"0-2">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"4-6">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"7-9">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"More than 9">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"How many times did you open your bowels last night?">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Nil">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"1-3">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"4-6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7 or more">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"In the last 24hrs, when opening your bowels, how urgent is it?">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Nil">
+					description = <"I can wait to go to the toilet until it is convenient for me">
+				>
+				["at0016"] = <
+					text = <"Hurry">
+					description = <"I need to get to the toilet quickly but not immediately">
+				>
+				["at0017"] = <
+					text = <"Immediately">
+					description = <"I need to go to the toilet right now/I cant hold stool/I have accidents">
+				>
+				["at0018"] = <
+					text = <"In the last 24hrs, have you had any blood in your stool">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"No blood in stool">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Tiny traces of blood in stool">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Sometimes obvious blood in stool">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Obvious blood in stool most of the time">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Over the last 24hrs, how do you feel in general?">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"I feel very well">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"I feel slightly below par">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"I feel poor">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"I feel very poor">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"I feel terrible">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Over the last 24hrs, have you experienced any of the following?">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Arthritis">
+					description = <"painful joints">
+				>
+				["at0031"] = <
+					text = <"Uveitis">
+					description = <"redness of the eye, eye pain, blurred vision, light sensitivity">
+				>
+				["at0032"] = <
+					text = <"Erythema nodosum">
+					description = <"tender large lumps on your skin, commonly on both shins">
+				>
+				["at0033"] = <
+					text = <"Pyoderma Gangrenosum">
+					description = <"deep ulcers usually on the legs">
+				>
+			>
+		>
+	>

@@ -1,0 +1,152 @@
+archetype (adl_version=1.4; uid=7776de6f-cff6-4d45-8f06-f6e4d7b57d70)
+	openEHR-EHR-OBSERVATION.crohns_disease_flare_recovery.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-09-09">
+		["name"] = <"Dr Andrew Brunton">
+		["organisation"] = <"Big Picture Medical">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"43f7a98ab3d4f8854e912539a3d47717">
+		["build_uid"] = <"1b0e7906-16bd-3110-9c49-df2564a2d0ae">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Crohns Disease Flare Recovery
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Over the last 24hrs, which of the following best describes your levels of wellbeing?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- I feel very well
+													at0006,    -- I feel slightly below par
+													at0007,    -- I feel poor
+													at0008,    -- I feel very poor
+													at0009]    -- I fell terrible
+												}
+											}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Over the last 24hrs, how much abdominal pain, cramping or discomfort have your experienced?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0011,    -- None
+													at0012,    -- Mild
+													at0013,    -- Moderate
+													at0014]    -- Severe
+												}
+											}
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Over the last 24hrs, how many liquid stools have you had?
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Crohns Disease Flare Recovery">
+					description = <"Crohns Disease Flare Recovery">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Over the last 24hrs, which of the following best describes your levels of wellbeing?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"I feel very well">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"I feel slightly below par">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"I feel poor">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"I feel very poor">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"I fell terrible">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Over the last 24hrs, how much abdominal pain, cramping or discomfort have your experienced?">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Mild">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Over the last 24hrs, how many liquid stools have you had?">
+					description = <"If patients have a stoma they should answer how many times they have had to empty their bag.">
+				>
+			>
+		>
+	>
