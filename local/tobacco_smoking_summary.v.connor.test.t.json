@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.5.5",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f7969af42e305c27397f567a4bda1124",
+      "MD5-CAM-1.0.1" : "8f287abcae253c52d5c231cf4302a070",
       "PARENT:MD5-CAM-1.0.1" : "7efc3d1a56da6d3e837ce38960965a36"
     },
     "details" : {
@@ -357,14 +357,21 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0080.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
               "nodeId" : "at0029.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -464,7 +471,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0030.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -477,12 +483,13 @@
                             "rmAttributeName" : "defining_code",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "at0083", "at0084" ]
+                              "constraint" : [ "ac0.7" ],
+                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -497,7 +504,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0023.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -510,11 +516,11 @@
                             "@type" : "C_ATTRIBUTE_TUPLE",
                             "members" : [ {
                               "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "magnitude",
+                              "rmAttributeName" : "units",
                               "children" : [ ]
                             }, {
                               "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "units",
+                              "rmAttributeName" : "magnitude",
                               "children" : [ ]
                             }, {
                               "@type" : "C_ATTRIBUTE",
@@ -524,7 +530,12 @@
                             "tuples" : [ {
                               "@type" : "C_PRIMITIVE_TUPLE",
                               "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/d" ]
+                              }, {
                                 "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
                                 "constraint" : [ {
                                   "lower" : 0.0,
                                   "lowerIncluded" : true,
@@ -533,10 +544,8 @@
                                   "upperUnbounded" : true
                                 } ]
                               }, {
-                                "@type" : "C_STRING",
-                                "constraint" : [ "1/d" ]
-                              }, {
                                 "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
                                 "constraint" : [ {
                                   "lower" : 1,
                                   "upper" : 1,
@@ -549,7 +558,12 @@
                             }, {
                               "@type" : "C_PRIMITIVE_TUPLE",
                               "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/wk" ]
+                              }, {
                                 "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
                                 "constraint" : [ {
                                   "lower" : 0.0,
                                   "lowerIncluded" : true,
@@ -558,10 +572,8 @@
                                   "upperUnbounded" : true
                                 } ]
                               }, {
-                                "@type" : "C_STRING",
-                                "constraint" : [ "1/wk" ]
-                              }, {
                                 "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
                                 "constraint" : [ {
                                   "lower" : 1,
                                   "upper" : 1,
@@ -721,7 +733,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0025.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -734,7 +745,7 @@
                             "rmAttributeName" : "magnitude",
                             "children" : [ {
                               "@type" : "C_INTEGER",
-                              "rmTypeName" : "Integer",
+                              "rmTypeName" : "INTEGER",
                               "occurrences" : "1..1",
                               "constraint" : [ {
                                 "lower" : 0,
@@ -1068,10 +1079,30 @@
             "code" : "at0089.1",
             "text" : "Status",
             "description" : "Statement about current smoking behaviour for all types of tobacco."
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
-        "nb" : { },
-        "sv" : { },
+        "nb" : {
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          }
+        },
         "de" : {
           "at0015.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -1099,9 +1130,22 @@
             "code" : "at0089.1",
             "text" : "Status",
             "description" : "Aussage zum aktuellen Rauchverhalten bei allen Tabakarten."
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
-        "fr" : { },
+        "fr" : {
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          }
+        },
         "nl" : {
           "at0015.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -1129,6 +1173,12 @@
             "code" : "at0089.1",
             "text" : "Status",
             "description" : "Uitspraak over het huidige rookgedrag voor alle typen tabak."
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         }
       },
@@ -1159,6 +1209,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.6",
           "members" : [ "ac0.3" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0083", "at0084" ]
         }
       }
     },
