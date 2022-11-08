@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.1",
+      "sem_ver" : "0.1.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "575b0810e721d5eea3c78dcf742ab2df",
+      "MD5-CAM-1.0.1" : "af2013877f2919392b8673980d6db251",
       "PARENT:MD5-CAM-1.0.1" : "19FEDB8EB9D83F76587DE9C7D7A30872"
     },
     "details" : {
@@ -527,6 +527,43 @@
                       } ],
                       "attributeTuples" : [ ]
                     }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at1043.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local_terms"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "local_terms" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "local_terms",
+                                "code" : "248218005",
+                                "value" : "Awake"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "248220008",
+                                "value" : "Sleeping"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
                       "occurrences" : "0..1",
@@ -610,7 +647,168 @@
                   "rmTypeName" : "ITEM_TREE",
                   "nodeId" : "at0007.2",
                   "targetPath" : "/data[at0001]/events[at0006]/state[at0007.1]",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0008.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local_terms"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "local_terms" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "local_terms",
+                                "code" : "10904000",
+                                "value" : "Standing"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "33586001",
+                                "value" : "Sitting"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "272580008",
+                                "value" : "Reclining"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "40199007",
+                                "value" : "Lying"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "272571008",
+                                "value" : "Lying with tilt to left"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at1043.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local_terms"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "local_terms" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "local_terms",
+                                "code" : "248218005",
+                                "value" : "Awake"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "248220008",
+                                "value" : "Asleep"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0011",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0013.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local_terms"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "720740000",
+                        "value" : "Adult Thigh"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0000000",
+                        "value" : "Large Adult"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "720737000",
+                        "value" : "Adult"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0000000",
+                        "value" : "Small Adult"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "7207366009",
+                        "value" : "Paediatric/Child"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0000000",
+                        "value" : "Infant"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0000000",
+                        "value" : "Neonatal"
+                      } ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
@@ -644,7 +842,8 @@
       },
       "termBindings" : {
         "SNOMED-CT" : {
-          "at0000.1" : "term:SNOMED-CT(2003)::364090009"
+          "at0000.1" : "term:SNOMED-CT(2003)::364090009",
+          "at0013.1" : "term:SNOMED-CT(2003)::246153002"
         }
       },
       "terminologyExtracts" : { },
@@ -662,6 +861,66 @@
         "ac0.4" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.4",
+          "members" : [ ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at1044", "at1045" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ "at1000", "at1001", "at1002", "at1003", "at1014" ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at1044", "at1045" ]
+        },
+        "ac0.15" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.15",
+          "members" : [ ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at0015", "at0016", "at0017", "at1008", "at1009", "at1018", "at1019" ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
           "members" : [ ]
         }
       }
@@ -1040,6 +1299,47 @@
             } ]
           } ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0009.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local_terms"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "local_terms" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "local_terms",
+                    "code" : "128975004",
+                    "value" : "At rest"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "309604004",
+                    "value" : "During exertion"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "255214003",
+                    "value" : "Post Exertion"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -1068,6 +1368,21 @@
         "ac0.4" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.4",
+          "members" : [ ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0006", "at0007", "at0008" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
           "members" : [ ]
         }
       }
